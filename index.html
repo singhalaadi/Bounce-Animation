@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Animation</title>
+    <style>
+        .container{
+            width:90vw;
+            height: 70vh;
+            background-color: burlywood;
+            margin: 5px;
+            position: absolute;
+        }
+        .ball{
+            width: 5%;
+            height: 15%;
+            background-color: aqua;
+            position: absolute;
+            bottom: 0;
+            border-radius: 70%;
+            border: 1px solid antiquewhite;
+            animation: x-axis 5s linear infinite, y-axis 2s ease-out infinite alternate;
+            padding: 10px;
+        }
+        @keyframes x-axis {
+            from{
+                left: 0;
+            }
+            to{
+                background-color: rgb(243, 137, 8);
+                left: 90%;
+            }
+        }
+        @keyframes y-axis {
+            from{
+                bottom: 0%;
+            }
+            to{
+                background-color: blueviolet;
+                bottom: 80%;
+            }
+        }
+        .ball:hover{
+            animation-play-state: paused;
+            cursor: pointer;
+            box-shadow: 10px 3px aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"><div class="ball"></div></div>
+</body>
+</html>
